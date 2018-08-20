@@ -7,33 +7,57 @@
     font-size: 20px !important;
 }
 </style>
+
 ---
+
 
 # 目次
 
-1. モダン JavaScript 開発の環境構築
-2. Reactを使ったフロントエンド開発
-3. Reduxを使ったアプリケーション構築
-4. deck.glの紹介
-5. Harmoware-VISとは
+1. Harmoware-VISとは
+2. モダン JavaScript 開発の環境構築
+3. Reactを使ったフロントエンド開発
+4. Reduxを使ったアプリケーション構築
+5. deck.glの紹介
 6. Harmoware-VISを使ってみる
+
+---
+
+# 1. Hamoware-VIS とは
+
+React Reduxを使って、deck.gl上での移動体の情報可視化や管理などを行うためのライブラリーで、主に名古屋大学河口研究室が中心になって開発しています。
+先ほど紹介した以下のライブラリに依存しています。
+
+- react-map-gl
+- luma.gl
+- deck.gl
+
+
+---
+# Hamoware-VIS とは
+
+`Harmowrare-VIS`の実行画面
+
+![](./images/harmoware-screenshot.png)
+
+
+---
+
+## Harmoware-VISを使うメリット
+
+1. 地理情報の時間更新の自動処理
+2. 時間コントロール系のコンポーネントを用意
+3. 移動体や停留所を表示するためのコンポーネントを用意
+
 
 --- 
 
-# 1. モダン JavaScript 開発の環境構築
+# 2. モダン JavaScript 開発の環境構築
 
 ---
 
 ## Node.jsをインストール
 
 モダンなJavaScript開発の環境構築にはNode.jsのインストールが必要不可欠です。まずはNode.jsを使えるようにしましょう。
-
----
-
-## Node.jsをインストール
-下記のサイトを利用することでインストールマネージャーを使って簡単にNode.jsの環境が整います。
-
-https://nodejs.org/en/download/
 
 ---
 
@@ -488,7 +512,6 @@ const sayHello = (person) => {
 
 # 3.Reactを使ったフロントエンド開発
 
-
 ---
 
 # Reactとは
@@ -509,14 +532,6 @@ const sayHello = (person) => {
 - Polymer（ https://www.polymer-project.org/ ）
 
 ![](./images/frameworks.png)
-
----
-
-
-# ではなぜReactなのか？
-
-- あくまでViewの差分更新のみの機能に特化している
-- ES2015以降の知識とJSXの知識さえあれば実装できる。
 
 ---
 
@@ -657,7 +672,7 @@ npm i babel-preset-react --save-dev
 ---
 
 
-# 4. Reduxを使ったアプリケーション構築
+# 3. Reduxを使ったアプリケーション構築
 
 ---
 
@@ -777,7 +792,7 @@ case types.RESET:
 ```
 
 ---
-# 5. deck.glの紹介
+# 4. deck.glの紹介
 
 ---
 # deck.glの紹介
@@ -817,8 +832,6 @@ Uber社が開発した、WebGL用データビジュアライゼーションラ�
 
 ---
 
-# 6. React + deck.gl
-
 記述例
 
 ```js
@@ -838,44 +851,10 @@ const flights = new ArcLayer({
 </MapGL>
 
 ```
-
----
-
-# 6. Harmoware-VISとは
-
 ---
 
 
-# Hamoware-VIS とは
-
-React Reduxを使って、deck.gl上での移動体の情報可視化や管理などを行うためのライブラリーで、主に名古屋大学河口研究室が中心になって開発しています。
-先ほど紹介した以下のライブラリに依存しています。
-
-- react-map-gl
-- luma.gl
-- deck.gl
-
-
----
-# Hamoware-VIS とは
-
-`Harmowrare-VIS`の実行画面
-
-![](./images/harmoware-screenshot.png)
-
-
----
-
-## Harmoware-VISを使うメリット
-
-1. 地理情報の時間更新の自動処理
-2. 時間コントロール系のコンポーネントを用意
-3. 移動体や停留所を表示するためのコンポーネントを用意
-
----
-
-
-# 7. Harmoware-VISを使ってみる
+# 5. Harmoware-VISを使ってみる
 
 ---
 
