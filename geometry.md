@@ -12,9 +12,8 @@
 </style>
 
 ---
-# 自己紹介
 
-<span class="fa fa-twitter"></span> @steelydylan
+<div style="background-image:url(./profile.png); position:fixed;top:0;left:0;width:100%;height:100%;"></div>
 
 ---
 # 目次
