@@ -37,6 +37,10 @@ Google Map APIを使用して取得した緯度、経度をエントリー（記
 
 ---
 
+
+
+---
+
 この位置情報の機能を活用してできたのが以下のサイト
 
 <div style="text-align: center;">
@@ -107,6 +111,18 @@ window.navigator.geolocation.getCurrentPosition(
 ```
 
 *https環境下でないと位置情報を取得できない*
+
+---
+## JavaScriptの Geolocation API で現在地を取得
+
+success時
+
+```js
+(longitude, latitude) => {
+   
+});
+```
+
 
 <img src="./qrcode.png" class="qrcode" />
 
