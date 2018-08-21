@@ -4,7 +4,7 @@
 <style>
 .qrcode {
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
   width: 120px;
   height: auto;
@@ -14,6 +14,10 @@
 ---
 
 <div style="background-image:url(./profile.png); position:fixed;top:0;left:0;width:100%;height:100%;"></div>
+
+---
+
+<div style="background-image:url(./cms.png?v); position:fixed;top:0;left:0;width:100%;height:100%;background-size:cover;"></div>
 
 ---
 # 目次
@@ -55,6 +59,8 @@ Google Map APIを使用して取得した緯度、経度をエントリー（記
 ![](./spymasterfam.png)
 
 spymaster.jp
+
+愛知県の情報を集めたウェブマガジン
 </div>
 
 ---
