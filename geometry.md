@@ -23,6 +23,15 @@
 
 ---
 # 1. 位置情報の活用例
+
+
+<div style="text-align:center">
+  
+![](./images/logo.jpg)
+
+</div>
+
+
 ### a-blog cms では MySQLの `GEOMETRY` 型を活用していてます。
 
 この機能を活用することで、利用者の位置情報に応じて店舗情報の出し分けが可能になります。
@@ -34,9 +43,6 @@
 ![](./google_map.png)
 
 Google Map APIを使用して取得した緯度、経度をエントリー（記事）に紐づけて保存します。
-
----
-
 
 
 ---
@@ -97,7 +103,6 @@ spymaster.jp
 ---
 # 2.  技術的説明
 
-<img src="./qrcode.png" class="qrcode" />
 
 ---
 ## JavaScriptの Geolocation API で現在地を取得
@@ -123,15 +128,20 @@ success時
 });
 ```
 
-
-<img src="./qrcode.png" class="qrcode" />
-
 ---
 ## JavaScriptの Geolocation API で現在地を取得
 
 ![](./caniuse.png)
 
 https://caniuse.com/#search=geolo
+
+
+---
+## JavaScriptの Geolocation API で現在地を取得
+
+### デバイスによる挙動の違い
+- モバイルは2回聞いたら再び聞いてくる
+- PCは一回許可すると許可したまま
 
 ---
 ## フロントから送られてきた位置情報を元にSQL文を発行
@@ -152,8 +162,6 @@ SELECT
   )
  ) * 111000 ) AS distance
 ```
-
-<img src="./qrcode.png" class="qrcode" />
 
 ---
 # ありがとうございました
