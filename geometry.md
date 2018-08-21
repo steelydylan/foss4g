@@ -167,7 +167,7 @@ SELECT
 ---
 # 今後の課題
 
-Google Mapだけではなく、OpenStreet MapやYahoo Mapにも対応していきたい。
+Google Mapだけではなく、`OpenStreetMap` や `Yahoo Maps` にも対応していきたい。
 
 ---
 # ありがとうございました
