@@ -875,3 +875,13 @@ https://github.com/steelydylan/harmoware-demo2/
 - https://github.com/Harmoware/Harmoware-VIS/tree/master/examples/bus3d
 - https://github.com/Harmoware/Harmoware-VIS/tree/master/examples/visualize-sample-nonmap
 - https://github.com/Harmoware/Harmoware-VIS/tree/master/examples/visualize-sample
+
+---
+
+# 今後の課題
+
+- npmへの公開
+- i18n対応
+- かっこいいスタイルをつける！
+
+などなど！
