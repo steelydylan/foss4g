@@ -13,12 +13,11 @@
 
 ---
 
-![bg](./profile.png)
-
+<div style="background-image:url(./profile.png); position:fixed;top:0;left:0;width:100%;height:100%;"></div>
 
 ---
 
-![bg](./cms.png)
+<div style="background-image:url(./cms.png?v); position:fixed;top:0;left:0;width:100%;height:100%;background-size:cover;"></div>
 
 ---
 # 目次
@@ -172,18 +171,9 @@ SELECT
 ```
 
 ---
-
-## フロントから送られてきた位置情報を元にSQL文を発行
-
-本当は`ST_Distance`などを使いたい。。。
-
-
----
 # 今後の課題
 
 Google Mapだけではなく、`OpenStreetMap` や `Yahoo Maps` にも対応していきたい。
-
-`Leaflet.js`の使用を検討
 
 ---
 # ありがとうございました

@@ -14,9 +14,8 @@
 # 目次
 
 1. 開発中のライブラリ（Harmoware-VIS）の紹介
-2. React, Reduxの説明
-3. deck.glの紹介
-4. Harmoware-VISを使ってみる
+2. deck.glの紹介
+3. Harmoware-VISを使ってみる
 
 ---
 
@@ -29,6 +28,11 @@ JavaScriptライブラリである、React Redux deck.glを使って、WebGL上�
 - luma.gl
 - deck.gl
 
+---
+
+# 1. 開発中のライブラリ（Harmoware-VIS）の紹介
+
+[https://github.com/Harmoware/Harmoware-VIS](https://github.com/Harmoware/Harmoware-VIS)
 
 ---
 # 1. 開発中のライブラリ（Harmoware-VIS）の紹介
@@ -37,336 +41,19 @@ JavaScriptライブラリである、React Redux deck.glを使って、WebGL上�
 
 ![](./images/harmoware-screenshot.png)
 
---- 
-
-# 2. React, Reduxの説明
-
 ---
 
-# Reactとは
+# 1. 開発中のライブラリ（Harmoware-VIS）の紹介
 
-- 平たく言えば、テンプレートエンジン
-- 仮装DOMを利用したHTMLの差分更新が特徴
+事前知識を勉強できるチュートリアルページ
 
-![](./images/react.png?)
+Node.js, npm, Webpack, Babel, React, Reduxの説明が詳しく書かれている
 
----
-# Reactとは
-
-他の似たようなUI系ライブラリとして以下があります。
-
-- Vue.js（ https://vuejs.org/ ）
-- Riot.js（ https://riot.js.org/ ）
-- Angular.js（ https://angularjs.org/ ）
-- Polymer（ https://www.polymer-project.org/ ）
-
-![](./images/frameworks.png)
-
----
-
-
-# ではなぜReactなのか？
-
-- あくまでViewの差分更新のみの機能に特化している
-- ES2015以降の知識とJSXの知識さえあれば実装できる。
-
----
-
-# Reactを実行してみよう
-
-```sh
-git clone https://github.com/steelydylan/react-sample.git .
-npm install
-npm run start
-```
+[https://github.com/Harmoware/Harmoware-VIS-Tutorial](https://github.com/Harmoware/Harmoware-VIS-Tutorial)
 
 
 ---
-# Reactを実行してみよう
-
-出力結果
-
-増加ボタンを押すことで、数字が1増加し、減少ボタンを押すことで1減少します。
-
-![](./images/count-sample.png)
-
----
-# Reactを実行してみよう
-
-カウント数を0にするボタンをSampleコンポーネントに追加してみましょう。
-
-
-1. renderメソッド内にボタンを追加
-
-```js
-<button onClick={this.reset.bind(this)}>リセット</button>
-```
----
-# Reactを実行してみよう
-
-2. resetメソッドを定義
-
-```js
-...
-reset() {
-  this.setState({
-    count: 0
-  });
-}
-...
-```
-
----
-# Reactを利用する際に便利なJSX記法
-
-JSXはReactを完結に記述するためにFacebook社によって開発された記法です。
-HTMLに似た書き方ですが、`class`を`className`と書いたり、若干、HTMLとは記述がことなります。
-
----
-# Reactを利用する際に便利なJSX記法
-JSXの記法例
-
-https://github.com/steelydylan/react-sample/blob/master/src/index.js
-
----
-# Reactを利用する際に便利なJSX記法
-
-属性に代入する値は文字列の場合はそのまま`"`で囲うことができるが、数字や変数などは`{}`で囲う必要があります。`style`はオブジェクトで記述する点にご注意ください。
-
-```js
-const Modal = <div className="modal" tabIndex={-1} style={{display:'none'}}>
-  <div className="modal-inner">
-    <div className="modal-header">
-    </div>
-    <div className="modal-body">
-    </div>
-  </div>
-</div>
-```
-
-
-
----
-# Reactのライフサイクル
-
-また、Reactにはライフサイクルというものがあり、ライフサイクルを覚えておくと、コンポーネントの生成時や削除時に処理を挟むことができます。
-
----
-
-## Reactのライフサイクル
-
-### `componentWillMount()`
-
-コンポーネントがhtml上に出力される寸前の処理
-
----
-
-## Reactのライフサイクル
-
-### `componentDidMount()`
-
-コンポーネントがhtml上に出力された直後の処理
-
----
-## Reactのライフサイクル
-
-### `componentWillReceiveProps(props)`
-
-コンポーネントが親コンポーネントから値を受け取る直前の処理。引数には受け取る予定の`props`の値が入っている。
-
----
-## Reactのライフサイクル
-
-### `componentWillUnmount()`
-
-コンポーネントがhtml上に出力されなくなった時の処理
-
----
-# Reactの導入
-パッケージをインストール
-
-```sh
-npm install react react-dom --save
-```
-
----
-# Reactの導入
-
-JSXをサポートするための文法プリセットをインストール
-
-```sh
-npm i babel-preset-react --save-dev
-```
-
-.babelrcの設定
-
-```js
-{
-  "presets": ["env", "react"]
-}
-```
-
----
-
-## create-react-appを利用
-
-create-react-appとは内部にwebpackを内包した、react環境を素早く構築するためのコマンドラインツール。
-npmでインストール可能。
-webpack初心者でも導入が簡単
-
---- 
-
-# create-react-appの実行
-
-```sh
-npm install create-react-app -g
-create-react-app パッケージ名
-yarn start
-```
-
----
-
-
-# 付随するReact周辺ツールの知識
-
-フロントエンド開発者はReact以外にも様々なツールを知っておくことで開発の幅が広がります。
-https://github.com/adam-golab/react-developer-roadmap
-
-- Redux（アプリケーションの状態を管理するためのツール）
-- jest（Reactに特化したJavaScriptのユニットテストツール）
-- GraphQL（REST APIに代わる新たなAPI サーバーへの問い合わせのためのデータクエリ言語）
-
-
-などなど
-
----
-
-# Reduxとは
-アプリケーションの状態（`State`）を環境に左右されず一貫したルールのもと管理するための仕組みです。
-
-![](./images/redux.png)
-
----
-# Reduxとは
-
-Reduxを理解するのに一番重要になってくるのが`Store`という概念です。
-`Store`はアプリケーションの状態である`State`を保持し、そのステートは`Action`というチケットを介して、`Reducer`という関数が実行され、その結果が新しい`State`として再び`Store`にセットされます。
-
-![](./images/redux.png)
-
-
-
----
-# Redux導入方法
-
-
-```sh
-npm install redux --save
-```
-
----
-
-# Redux導入方法
-
-
-```sh
-npm install redux --save
-```
-
----
-# ReactとReduxを連携する
-
-ReduxのState管理の仕組みとReactのコンポーネントを紐づけるために`react-redux`というツールを使います。`react-redux`を使うことによって、`Store`の状態を`Component`に紐づけたり、`Component`から`Action`を実行することができます。
-
----
-# ReactとReduxを連携する
-
-![](./images/react-redux.png)
-
-
----
-# ReactとReduxを連携する
-インストール方法
-
-```sh
-npm install react-redux --save
-```
-
----
-# ReactとReduxを連携する
-
-下記のコードでは`mapStateToProps` `mapDispatchToProps`を`connect`することで、`Reducer`の`state`や`action`をAppコンポーネントのpropsで参照可能にしています。
-
-https://gist.github.com/steelydylan/6654d72c6c95f5b9a1fbeaa209e6d280
-
---- 
-# ReactとReduxを連携する
-
-連携後は、`connect`されたコンポーネントから、`this.props.state`、`this.props.actions.action()`のような形で呼び出すことができます。
-
----
-# React Redux 連携サンプル
-
-https://github.com/steelydylan/react-redux-sample
-
-```sh
-git clone https://github.com/steelydylan/react-redux-sample.git .
-npm install
-npm run start
-```
-
----
-# React Redux 連携サンプル
-
-## 実行画面
-![](./images/count-sample.png)
-
----
-# React Redux 連携サンプル
-
-現在、増加ボタンと減少ボタンがあり、ボタンをクリックすると、値が±1増減します。さらに、`RESET`というアクションを追加して、値を`0`に戻すボタンを追加してみましょう。
-
----
-# React Redux 連携サンプル
-
-1. `constants/ActionTypes.js`で`RESET`を定数として追加
-
-```js
-export const RESET = 'RESET';
-```
-
----
-
-2. `actions/index.js`で`reset`をアクションとして追加
-
-```js
-export const reset = () => ({ type: types.RESET });
-```
-
----
-
-3. `reducers/index.js`で`RESET`に対する処理を記述
-
-```js
-...
-case types.RESET:
-   return Object.assign({}, state, { count: 0 });
-...
-```
-
----
-
-4. `components/sample.js`でアクションを実行するためのボタンを追加
-
-
-```js
-<button onClick={() => { this.props.reset(); }}>
-  リセット
-</button>
-```
-
----
-# 4. deck.glの紹介
+# 2. deck.glの紹介
 
 ---
 # deck.glの紹介
@@ -428,7 +115,7 @@ const flights = new ArcLayer({
 ---
 
 
-# 5. Harmoware-VISを使ってみる
+# 3. Harmoware-VISを使ってみる
 
 ---
 
