@@ -13,11 +13,12 @@
 
 ---
 
-<div style="background-image:url(./profile.png); position:fixed;top:0;left:0;width:100%;height:100%;"></div>
+![bg](./profile.png)
+
 
 ---
 
-<div style="background-image:url(./cms.png?v); position:fixed;top:0;left:0;width:100%;height:100%;background-size:cover;"></div>
+![bg](./cms.png)
 
 ---
 # 目次
