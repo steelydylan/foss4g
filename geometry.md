@@ -142,14 +142,6 @@ success時
 
 https://caniuse.com/#search=geolo
 
-
----
-## JavaScriptの Geolocation API で現在地を取得
-
-### デバイスによる挙動の違い
-- モバイルは2回聞いたら再び聞いてくる
-- PCは一回許可すると許可したまま
-
 ---
 ## フロントから送られてきた位置情報を元にSQL文を発行
 
